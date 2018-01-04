@@ -16,12 +16,12 @@ object CollectionDemo2 {
     val map = Map("k1"->"v1","k2"->1.0,"k3"->"v3")
     map+("k4"->"v4")
     map.foreach(e=> {//遍历方式1 可以看到map的k,v其实是一个个元组
-      val (k,v)=e;
+      val (k,v)=e;//写不必要的分号也会报警告
       println(k+":"+v)})
 
     map.foreach(e=> println(e._1+":"+e._2))//遍历方式2
 
-    var sq = (x:Int)=>x*x//有点函数式编程的意思了
+    var sq = (x:Int)=>"aaa"//有点函数式编程的意思了
     val res = sq(5)
     println(res)
 

@@ -26,10 +26,21 @@ object FunctionDemo2 {
   //  println(str)
     val x=multiplyBy(10)
     println(x(4))
+
+    val c = new C
+    val f = c.finc()
+    println(f)
   }
-  def convertIntToString(f:(Int)=>Double)=
+  def convertIntToString(f:Int=>Double)=
     f(4)
 
   def multiplyBy(factor:Double)=
     (x:Double)=>factor*x
+
+  class C{//函数与方法的区别
+    var acc = 0
+    def minc = {acc+1}
+    val finc = ()=>acc+1
+    //def minc = { acc += 1 }
+  }
 }
