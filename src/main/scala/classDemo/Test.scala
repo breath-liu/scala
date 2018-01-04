@@ -1,5 +1,7 @@
 package classDemo
 
+import scala.util.Random
+
 /**
   * Created by Administrator on 2018/1/4.
   */
@@ -20,6 +22,15 @@ object Test {
 
     //=======================================================
     val item = new Item("item",12.3)
+
+    println("Crazy"*3)
+    val res = BigInt(2).pow(3)
+    println(res)
+
+    val ran = Random.nextString(5)
+   // println(ran)
+
+    println(BigInt(Random.nextInt()).toString(36))//生成一个随机数，并以36进制表示
 
   }
 }

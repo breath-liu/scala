@@ -36,6 +36,8 @@ object CollectionDemo {
 
    // List.make(5, "hey")
     print(list1.mkString)
+
+
   }
 
 }

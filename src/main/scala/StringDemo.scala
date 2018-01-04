@@ -1,5 +1,8 @@
 import javax.tools.ForwardingFileObject
 
+import scala.collection.immutable.StringOps
+import java.util.Date
+
 /**
   * Created by Administrator on 2018/1/4.
   */
@@ -28,6 +31,15 @@ object StringDemo {
       case 3=>"c"
     }
 
+    var same = str.intersect("orde")//在这里str被隐式转换为了StringOps intersect也是里面的方法
+    println(same)
+
+   // println(str.toInt)//scala 用这种方式来实现类型的转换['=
+
+    println(str.head)
+    println(str.last)
+
+    printf(f"scala print $str ${new Date().toString}")//f插值器打印
 
   }
 
