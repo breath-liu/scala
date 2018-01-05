@@ -39,7 +39,12 @@ object StringDemo {
     println(str.head)
     println(str.last)
 
-    printf(f"scala print $str ${new Date().toString}")//f插值器打印
+    println(f"scala print $str ${new Date().toString}")//f插值器打印
+
+    var x:Unit = 1
+    println(x)
+    var y = 0
+    x = y = 1
 
   }
 
