@@ -41,7 +41,7 @@ object StringDemo {
 
     println(f"scala print $str ${new Date().toString}")//f插值器打印
 
-    var x:Unit = 1
+    var x:Unit = ()
     println(x)
     var y = 0
     x = y = 1
