@@ -55,6 +55,12 @@ object ForDemo {
       }
     }
 
+    println()
+
+    for (a <- 10 to 2){//不能这样直接倒序打印，要用reverse
+      print(a+",")
+    }
+
   }
 
 }
