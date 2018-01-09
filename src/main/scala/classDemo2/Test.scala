@@ -1,6 +1,6 @@
 package classDemo2
 
-import classDemo.Item
+import classDemo.{Item, Person}
 import classDemo2.OutterClass.InnerC
 
 
@@ -35,6 +35,7 @@ object Test {
     val s2 = Stu(22,"ab")
     println(s)
     println(s==s2)
+
 
   }
 }

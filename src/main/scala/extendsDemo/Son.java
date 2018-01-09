@@ -5,10 +5,14 @@ package extendsDemo;
  */
 public class Son extends Father {
 
-    @Override
-    public void eat(){
-        String age = super.age;
-        System.out.println("son eat");
+    private int a = 10;
+
+    public int getA() {
+        return this.a;
     }
 
+    private final int range = 2222;
+    public int range() {
+        return this.range;
+    }
 }

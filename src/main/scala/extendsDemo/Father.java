@@ -5,14 +5,27 @@ package extendsDemo;
  */
 public class Father {
 
-    private String name;
-    public String age;
-    public void eat(){
-        System.out.println("father eat");
+    public final int a =1 ;
+    public final int[] arr = new int[getA()];
+
+    public int getA() {
+        return this.a;
     }
 
-    public static void main(String[] args) {
-        Son son = new Son();
-        son.eat();
+    public int[] getArr() {
+        return this.arr;
     }
+
+    private final int range = 10;
+    private final int[] env = new int[range()];
+
+
+    public int range() {
+        return this.range;
+    }
+
+    public int[] env() {
+        return this.env;
+    }
+
 }

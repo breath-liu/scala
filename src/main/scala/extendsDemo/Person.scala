@@ -5,8 +5,11 @@ import scala.beans.BeanProperty
 /**
   * Created by Administrator on 2018/1/9.
   */
-class Person {
+abstract class Person {
   @BeanProperty var name = "tom"
+
+
+  def generateId:Int//声明抽象方法
 
   def gName = name
 
@@ -16,8 +19,8 @@ class Person {
 
   def vname = name
 
-
-
+  val range = 10
+  val env:Array[Int] = new Array[Int](range)
 }
 
 
