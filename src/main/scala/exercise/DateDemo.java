@@ -1,6 +1,5 @@
 package exercise;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +17,10 @@ public class DateDemo {
         Inner bb = new DateDemo().new Inner("bb");
         aa.list.add(bb);
         System.out.println(aa.list);
+
+        long addend = 0xBL;
+        System.out.println(addend);
+
 
     }
 

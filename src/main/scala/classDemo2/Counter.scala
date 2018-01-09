@@ -5,9 +5,7 @@ class Counter {
 
   private var age = 0//自动生成age与age_（setter）方法
 
-  def increment(){
-    value+=1
-  }
+  def increment() = value+=1
 
   def current = value
 

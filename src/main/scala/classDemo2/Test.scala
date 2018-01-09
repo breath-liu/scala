@@ -7,8 +7,10 @@ import classDemo2.OutterClass.InnerC
 object Test {
   def main(args: Array[String]): Unit = {
     val c = new Counter
-    val va = c.increment//加不加括号都可以
+    val va = c.increment()//加不加括号都可以
     val value = c.current//不能用括号调用一个没有声明参数的函数
+    println(va)
+    println(value)
 
     val item = new Item("cc")
     println(item.brand)
