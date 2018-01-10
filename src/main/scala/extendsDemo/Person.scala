@@ -14,12 +14,12 @@ abstract class Person {
   def gName = name
 
   def vname_= (aa:String):Unit={//在定义一个返回方法的函数时等号前不能写空格，不知道为啥
-    name=aa;
+    name=aa
   }
 
   def vname = name
 
-  val range = 10
+  def range:Int = 10
   val env:Array[Int] = new Array[Int](range)
 }
 

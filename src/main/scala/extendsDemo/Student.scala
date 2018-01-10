@@ -17,5 +17,13 @@ class Student extends Person{
   }
 
   override val range: Int = 2
+
+  //重写hashcode与equals
+  override def equals(obj: scala.Any): Boolean = obj match {//匹配模式
+    case c1:Student=>this.gName == c1.gName
+    case _=>false
+  }
+
+  override def hashCode(): Int = gName.##
 }
 

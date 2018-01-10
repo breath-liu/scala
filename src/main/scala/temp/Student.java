@@ -1,14 +1,53 @@
 package temp;
 
-import scala.reflect.ScalaSignature;
-
-@ScalaSignature(bytes="\006\001M2A!\001\002\001\013\t91\013^;eK:$(\"A\002\002\027\025DH/\0328eg\022+Wn\\\002\001'\t\001a\001\005\002\b\0215\t!!\003\002\n\005\t1\001+\032:t_:DQa\003\001\005\0021\ta\001P5oSRtD#A\007\021\005\035\001\001bB\b\001\005\004%\t\005E\001\006O:\013W.Z\013\002#A\021!c\007\b\003'e\001\"\001F\f\016\003UQ!A\006\003\002\rq\022xn\034;?\025\005A\022!B:dC2\f\027B\001\016\030\003\031\001&/\0323fM&\021A$\b\002\007'R\024\030N\\4\013\005i9\002BB\020\001A\003%\021#\001\004h\035\006lW\r\t\005\006C\001!\tEI\001\nm:\fW.Z0%KF$\"aI\024\021\005\021*S\"A\f\n\005\031:\"\001B+oSRDQ\001\013\021A\002E\t!!Y1\t\013)\002A\021I\026\002\025\035,g.\032:bi\026LE-F\001-!\t!S&\003\002//\t\031\021J\034;\t\017A\002!\031!C!W\005)!/\0318hK\"1!\007\001Q\001\n1\naA]1oO\026\004\003")
 public class Student extends Person
 {
-    private final int range = 2222;
+    public int range = 2222;//为啥这里用不用final运行结果是不一样的
 
+    public Student() {
+        range();
+        System.out.println("子类构造器初始化");
+    }
 
     public int range() {
+        System.out.println("初始化子range:"+range);
         return this.range;
     }
 }
+
+abstract class Person {
+    private String name = "tom";
+
+    public int range = 10;
+    public int pos = range();
+    public int[] env = new int[range];
+
+    public Person() {
+        System.out.println("父类构造器初始化");
+        range();
+        System.out.println(range);
+    }
+
+    public int range() {
+        System.out.println("初始化父range");
+        return this.range;
+    }
+
+    public int[] env() {
+        return this.env;
+    }
+
+
+}
+
+class test{
+    public static void main(String[] args) {
+        Student s = new Student();
+        System.out.println("==========="+s.env().length);
+        System.out.println(s.range);
+        // System.out.println("pos:"+s.pos);
+        Student s2 = new Student();
+        System.out.println("==========="+s2.env().length);
+    }
+}
+
