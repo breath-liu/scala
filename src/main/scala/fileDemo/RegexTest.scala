@@ -20,6 +20,13 @@ object RegexTest {
       }
       else None})
     println(newStr)
+
+    println(ori.matches("([\\$[0-9],?])+"))
+
+
+    val mutiPartten = "([0-9]+)([a-z]+)".r//正则表达式组
+    val matches2 = mutiPartten.findAllMatchIn("9a3 abc 10def")
+    matches2.foreach(m=>println(m.matched))
   }
 
 }

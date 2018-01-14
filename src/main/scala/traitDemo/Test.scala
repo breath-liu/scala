@@ -16,7 +16,7 @@ object Test {
     val account4 = new Account
     println(account4.asInstanceOf[ClassnameLogger].classname)
 
-    //val exception = new UnhappyException
+    val exception = new UnhappyException
 
     val egg = new Ellipse2D.Double(5,10,20,30) with RectlangeLike//变量名不能以数字开头，用特质扩展类
     egg.getX

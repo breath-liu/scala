@@ -10,7 +10,7 @@ object Test {
   def main(args: Array[String]): Unit = {
     var source:Source = null
     try {
-      source = Source.fromFile("C:\\Users\\Administrator\\Desktop\\sd.sql","utf-8")
+      source = Source.fromFile("C:\\Users\\Administrator\\Desktop\\test.txt","utf-8")
       //println(source.mkString)//全部打印
       val iterator = source.getLines()
      // val array = iterator.toArray
