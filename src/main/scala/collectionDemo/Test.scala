@@ -24,6 +24,25 @@ object Test {
     println(s1)
     val map = l2.groupBy(_+"a")
     println(map)
+
+    val count = l1.reduce(_+_)//reduce=reduceleft
+
+    val flodleft = (10/:(1::2::3::Nil))(_+_)//flodleft
+    println(flodleft)
+
+    val str = "asadkjsjclk"
+    val m = collection.mutable.Map[Char,Int]()
+    (m /: str){
+      (map,c)=>map+=(c->(map.getOrElse(c,0)+1))
+    }
+    println(m)
+
+    //11for(i<-(0 until 10000).par) print(s"$i,")
+
+    getMiddle(Array("a","b"))
+
+    val i = List(1,2,3).par.aggregate(0)({ (sum, ch) => {println(f"sum====$sum");sum/2 + ch.toInt} }, { println("add");(p1, p2) => {println(f"add======$p1,$p2");p1 + p2} })
+    println(i)
   }
 
   def itrate(list:List[Int]): Unit ={
@@ -31,6 +50,14 @@ object Test {
       println(list.head)
       itrate(list.tail)
     }
+  }
+
+  def getMiddle[Int,X](arr:Array[String])={
+    arr(arr.length/2)
+  }
+
+  def mk(seq:Seq[Any]): Unit ={
+    seq.reduceLeft(_+","+_)
   }
 
 }

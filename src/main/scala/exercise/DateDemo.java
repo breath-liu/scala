@@ -20,7 +20,7 @@ public class DateDemo {
 
         long addend = 0xBL;
         System.out.println(addend);
-
+        Class<String> stringClass = String.class;
 
     }
 
