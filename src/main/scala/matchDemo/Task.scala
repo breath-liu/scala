@@ -7,6 +7,7 @@ object Task {
     println(swap(Array(1,2,3,4)).mkString(","))
     val l = Some(5)::None::Some(2)::Nil
     println(count(l))
+    println(leafSum((3::8::Nil)::2::(5::Nil)::Nil,0))
   }
 
   def swap(tup:(Any,Any)):(Int,Int)={
@@ -28,6 +29,14 @@ object Task {
       (x,y)=>{
         if(y.isEmpty) x else x+y.get
       }
+    }
+  }
+
+  def leafSum(list:List[Any],init:Int): Int ={
+    (init/:list){
+      case (x:Int,y:Int) => x+y
+      case (x:Int,y:List[Any]) => leafSum(y,x)//尾递归，最后一句是函数调用
+      case other => other._1
     }
   }
 }
