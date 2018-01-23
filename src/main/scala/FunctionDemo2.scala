@@ -9,6 +9,9 @@ object FunctionDemo2 {
       x+1
     }
     var inc = 1+(_:Int)
+    var sp = (str:String) => str.split(",")
+    var sp2 = (_:String).split(_:String)
+
    // val res = increament(2)
     //println(res)
 

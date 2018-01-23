@@ -48,6 +48,7 @@ class test{
         // System.out.println("pos:"+s.pos);
         Student s2 = new Student();
         System.out.println("==========="+s2.env().length);
+
     }
 }
 
