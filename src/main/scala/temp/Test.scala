@@ -7,8 +7,8 @@ object Test {
     arr(0) = 2
     println(arr.mkString(","))
     val l = List(1,2,3)
-    l(1) = 3
-    println(l.mkString(","))
+    //l(1) = 3
+    //println(l.mkString(","))
   }
 
 }
