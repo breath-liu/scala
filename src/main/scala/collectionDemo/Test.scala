@@ -40,13 +40,9 @@ object Test {
     //11for(i<-(0 until 10000).par) print(s"$i,")
 
     getMiddle(Array("a","b"))
-    //aggregate是为了分布式计算产生的函数，第一个参数是给定一个初始化的值，第一个函数是定义一个把整个集合分片后，每个分片的处理流程，第二个函数定义了每个分片处理结果的聚合方法
-    //这个函数解决了flod和reduce函数对集合数据类型和返回值类型要求一致的问题
-    val i = List(1,2,3).par.aggregate(1)({ (sum, ch) => {println(f"sum====$sum");sum + ch} }, { println("add");(p1, p2) => {println(f"add======$p1,$p2");p1 + p2+1} })
-    println(i)
-    val l = 1::2::3::Nil
-    //println(l.reduce((x,y)=>List(x,y)))
 
+    val i = List(1,2,3).par.aggregate(0)({ (sum, ch) => {println(f"sum====$sum");sum/2 + ch.toInt} }, { println("add");(p1, p2) => {println(f"add======$p1,$p2");p1 + p2} })
+    println(i)
   }
 
   def itrate(list:List[Int]): Unit ={
