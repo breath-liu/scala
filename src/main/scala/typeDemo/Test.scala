@@ -20,6 +20,7 @@ object Test {
     val arr = makePair(3,5)
     println(arr.mkString(","))
 
+
     //println(implicitly(ClassTag[Int].apply(_)))
   }
 
@@ -31,5 +32,6 @@ object Test {
     /*val list = List(first,second)
     list*/
   }
+
 
 }

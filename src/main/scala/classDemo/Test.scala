@@ -10,8 +10,11 @@ object Test {
     val p = new Person
     println(p.name)
 
-    p.name_=("john")//setter 方法
-    p.name = "john"//setter 方法 其实也是调用name_
+    //             p.name_ =
+    p.name_=("john")//setter 方法 别误会，这个setter方法叫name_=
+    p.name = "john"//
+
+    // setter 方法 其实也是调用name_
     println(p.name)//getter方法
 
     var comm = p.getComment()//写不必要的括号
