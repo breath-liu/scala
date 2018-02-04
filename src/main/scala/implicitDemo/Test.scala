@@ -1,13 +1,9 @@
-package implicitDemo
-
-import java.io.File
-
-import scala.io.Source
+import implicitDemo.Delimiter
 
 object Test {
 
   def main(args: Array[String]): Unit = {
-    import RichFile._
+    import implicitDemo.RichFile._
     println(strToArr(3).mkString(","))
     //new File("readme").read()
     implicit val imp = new Delimiter("“","”")//会优先使用在当前作用域内能够找到的隐式参数

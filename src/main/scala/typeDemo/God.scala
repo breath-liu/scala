@@ -1,0 +1,5 @@
+package typeDemo
+
+class God {
+
+}

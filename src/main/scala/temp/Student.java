@@ -1,5 +1,8 @@
 package temp;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Student extends Person
 {
     public int range = 2222;//为啥这里用不用final运行结果是不一样的
@@ -13,6 +16,14 @@ public class Student extends Person
         System.out.println("初始化子range:"+range);
         return this.range;
     }
+
+    @Override
+    public HashMap each(HashMap<String, String> map) {
+        //super.each(map);
+        return null;
+    }
+
+
 }
 
 abstract class Person {
@@ -37,6 +48,9 @@ abstract class Person {
         return this.env;
     }
 
+    public Map each(HashMap<String,String> map){
+        return null;
+    }
 
 }
 
@@ -48,6 +62,7 @@ class test{
         // System.out.println("pos:"+s.pos);
         Student s2 = new Student();
         System.out.println("==========="+s2.env().length);
+
     }
 }
 
