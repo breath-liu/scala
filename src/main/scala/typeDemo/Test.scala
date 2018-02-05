@@ -17,6 +17,8 @@ object Test {
     val co = new Comp_one("a","ab")
     println(co.smaller)
 
+
+
     val arr = makePair(3,5)
     println(arr.mkString(","))
 

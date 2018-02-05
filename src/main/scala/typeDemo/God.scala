@@ -1,5 +1,7 @@
 package typeDemo
 
-class God {
+class God extends Friend [God]{
+  override def beFriend(someone: God): Unit = {
 
+  }
 }

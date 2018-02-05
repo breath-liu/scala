@@ -8,4 +8,7 @@ class Student(name:String,age:Int) extends Person(name,age) {
     this.score = score
   }
 
+  def study(): Unit ={
+
+  }
 }
