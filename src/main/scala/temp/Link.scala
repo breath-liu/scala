@@ -7,3 +7,10 @@ class Link() {
 
 
 }
+
+object Link{
+
+  def checkIndex(index:Test.index): Unit ={
+    //index.get
+  }
+}
