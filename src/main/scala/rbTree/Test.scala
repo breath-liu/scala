@@ -11,7 +11,7 @@ object Test {
     rbTree.insert(Node(5))
     rbTree.insert(Node(2))
     rbTree.peek()
-    rbTree.left_rotate(rbTree.root)
+    rbTree.right_rotate(rbTree.root)
     println("===")
     rbTree.peek()
   }

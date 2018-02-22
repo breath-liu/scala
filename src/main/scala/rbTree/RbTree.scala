@@ -18,19 +18,20 @@ class RbTree {
 
   def right_rotate(node:Node){
     if(root.eq(node))
-      root = node.right
-    val right = node.right
-    val sLeft = right.left
-    right.parent = node.parent
-    node.parent = right
-    right.left = node
-    node.right = sLeft
-    sLeft.parent = node
+      root = node.left
+    val left = node.left
+    val sRight = left.right
+    left.parent = node.parent
+    node.parent = left
+    left.right = node
+    node.left = sRight
+    sRight.parent = node
   }
 
   def insert(node:Node): Unit ={
     root match {
       case null => root = node
+        node.color = Color.Black
       case _ =>
         var direct = false
         var current = root
@@ -53,6 +54,7 @@ class RbTree {
         else
           parent.right = node
         node.parent = parent
+
     }
   }
 
