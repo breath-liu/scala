@@ -13,7 +13,7 @@ object Task {
     //val rich = RichFraction
     import implicitDemo._
 
-    println(RichFraction.smaller(Fraction(3,0),Fraction(1,2)))
+    //println(RichFraction.smaller(Fraction(3,0),Fraction(1,2)))
 
    // val ordering = implicitly(Ordering[Fraction])
     val ordering2 = implicitly(Ordering[Int])
@@ -22,7 +22,9 @@ object Task {
     println(implicitly(Temp[Int]))//这样是调用apply方法获取隐式对象
     //fromLessThan((x,y)=>x==y)
     import Ordered._
-    Fraction(2,3)>Fraction(2,0)
+    //Fraction(2,3)>Fraction(2,0)
+    Fraction(true,1).compareTo(Fraction(false,5))
+    println(s"${Fraction(true,1)>Fraction(true,2)}========")
     'a'.toUpper
 
    // "abc".map()

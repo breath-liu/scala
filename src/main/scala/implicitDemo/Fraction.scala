@@ -1,3 +1,3 @@
 package implicitDemo
 
-case  class Fraction(a:Int,b:Int)
+case  class Fraction(a:Boolean,b:Int)
