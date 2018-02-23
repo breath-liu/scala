@@ -2,12 +2,6 @@ package rbTree
 
 import scala.math.Ordering
 
-class RichNode[T:Ordering]{
-
-}
-
-
-
 object RichNode {
 
   implicit object OrderNode extends Ordering[Node]{

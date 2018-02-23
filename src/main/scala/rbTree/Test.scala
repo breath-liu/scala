@@ -10,14 +10,17 @@ object Test {
     rbTree.insert(Node(4))
     rbTree.insert(Node(5))
     rbTree.insert(Node(2))
+    //rbTree.insert(Node(10))
+    //rbTree.insert(Node(20))
+    //rbTree.insert(Node(30))
     rbTree.peek()
-    rbTree.right_rotate(rbTree.root)
-    println("===")
+    rbTree.delete(7)
+    println("==")
     rbTree.peek()
   }
 
   def add(a:Node = null,b:Int = 2)={
-    a
+    //val i:Int = null
   }
 
 }
