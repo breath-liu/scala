@@ -91,7 +91,7 @@ object Test {
       case temp @Red(_) => println(temp)
     }*/
 
-    abstract class A; // sealed abstract class A
+    abstract class A // sealed abstract class A
     case class B(a:Int) extends A
     case class C(a:Int) extends A
     case class D(a:Int) extends A

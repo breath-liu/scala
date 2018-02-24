@@ -1,5 +1,7 @@
 package rbTree
 
+import rbTree.Color.Color
+
 class RbTree {
 
   var root:Node = _
@@ -115,9 +117,11 @@ class RbTree {
     }
   }
 
+
   def peek(){//“约定好如果方法包含side effect,要写括号” _不太明白在说什么
     peek(root)
   }
+
 
   def peek(node: Node): Unit = {
     if(node!=null&&node.value!= -1){//尾递归是指函数的最后一行是递归调用，无需进行回溯，栈空间占用由O(n)变为O(1)
@@ -143,12 +147,20 @@ class RbTree {
   def delete(value: Int): Unit ={
     val delNode = find(value)
     if(delNode!=null){
-      if(delNode.left==null||delNode.left.value== -1)
+      var x = delNode.color//删除节点颜色
+      var y:Node = null//后继节点颜色
+      if(delNode.left==null||delNode.left.value== -1){
+        y = delNode.right
         transplant(delNode,delNode.right)
-      else if (delNode.right==null||delNode.right.value== -1)
+      }
+      else if (delNode.right==null||delNode.right.value== -1){
+        y = delNode.left
         transplant(delNode,delNode.left)
+      }
       else {
         val successor = presuccessor(delNode)
+        x = successor.color
+        y = successor.left
         if(successor.parent.ne(delNode)){//如果不是删除节点的直接子节点
           transplant(successor,successor.left)
           successor.left = delNode.left
@@ -159,8 +171,8 @@ class RbTree {
         delNode.right.parent = successor
         successor.color = delNode.color
       }
-      //if()
-      //rb_delete_fixup(delNode)
+      if(x==Color.Black)
+        rb_delete_fixup(y)
     }
   }
 
