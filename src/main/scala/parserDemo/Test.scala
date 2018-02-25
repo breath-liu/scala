@@ -1,5 +1,5 @@
 package parserDemo
-
+/*
 import scala.util.parsing.combinator.RegexParsers
 
 class Test extends RegexParsers {
@@ -9,7 +9,7 @@ class Test extends RegexParsers {
   //def factor:Parser[Any] = number | "("+expr+")"
   //def expr:Parser[Any]
 
-}
+}*/
 
 
 
