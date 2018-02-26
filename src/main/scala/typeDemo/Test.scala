@@ -1,6 +1,7 @@
 package typeDemo
 
 import scala.reflect.ClassTag
+import scala.runtime.RichInt
 
 
 object Test {
@@ -14,7 +15,9 @@ object Test {
     implicit object ComImpl extends Comparable[String]{
       override def compareTo(o: String): Int = 1
     }
-    val co = new Comp_one("a","ab")
+    import Ordered._
+    import Ordering._
+    val co = new Comp_one(10,2)
     println(co.smaller)
 
 
