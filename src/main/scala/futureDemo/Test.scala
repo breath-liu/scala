@@ -50,7 +50,7 @@ object Test {
     }
     println(s"current time is ${LocalTime.now()}========")
 
-    /*val res = "-3+4".map{//在不接受偏函数的的方法中要列举出全部的case,不然会报MatchError
+   /* val res = "-3+4".map{//在不接受偏函数的的方法中要列举出全部的case,不然会报MatchError
       case '+' => 1
     }*/
 

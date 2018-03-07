@@ -106,7 +106,10 @@ object Test {
 
   def demo6(): Unit ={
     val str = "3+4"
-    println(str.collect{case '+'=>1})//偏函数，不完全列举函数
+    println(str.collect{
+      case '3'=>2
+      case '+'=>5
+    })//偏函数，不完全列举函数
 
     val f:PartialFunction[String,Int] = {
       case "+" => -1
@@ -114,6 +117,6 @@ object Test {
     }
 
     val lift = f.lift//变为一个返回option的函数
-    for (i<-lift("0")) println(i)//使用for来便利option
+    for (i<-lift("+")) println(i)//使用for来便利option*/
   }
 }
